@@ -76,5 +76,6 @@ const callback = () => {
 
 (function() {
   lazyVid.load();
+  vid.load();
   document.getElementById("fucku").addEventListener("click", callback, false);
 })();
