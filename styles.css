@@ -7,8 +7,6 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-#GODLESS {
-}
 
 #fucku {
   background-color: #ece4cf;
@@ -19,6 +17,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  text-transform: uppercase;
 }
 
 #stronger {
@@ -253,4 +252,8 @@ body {
 #power {
   display: none;
   position: absolute;
+}
+
+#coming {
+  display: none;
 }

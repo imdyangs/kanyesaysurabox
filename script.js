@@ -15,6 +15,8 @@ const i = document.getElementById("i");
 const fucku = document.getElementById("fucku");
 const text = document.getElementById("text");
 const power = document.getElementById("power");
+var vid = document.getElementById("stronger");
+var lazyVid = document.getElementById("lazy-loaded-swap");
 
 const randomExceptPrevious = prev => {
   let rand = Math.floor((Math.random() * 67)) + 5;
@@ -34,11 +36,8 @@ const randomExceptPrevious = prev => {
 const previouslyUsedX = [];
 const previouslyUsedY = [];
 const setRandomDisplayPosition = element => {
-  console.log("calling this shit");
   const x = randomExceptPrevious(previouslyUsedX);
   const y = randomExceptPrevious(previouslyUsedY);
-  console.log(x)
-  console.log(y)
   element.style.display = "block";
   element.style.left = `${x}vw`
   element.style.top = `${y}vh`
@@ -54,7 +53,6 @@ const callback = () => {
   console.log("https://www.youtube.com/watch?v=ll3CMgiUPuU")
   const btn = document.getElementById("LEL");
   btn.style.display = "none";
-  var vid = document.getElementById("stronger");
   vid.play();
 
   setTimeout(() => setRandomDisplayPosition(a), 2940);
@@ -70,12 +68,13 @@ const callback = () => {
   setTimeout(() => setRandomDisplayPosition(power), 40800); // NO ONE MAN
   setTimeout(() => setRandomDisplayPosition(g), 49500);
   setTimeout(() => setRandomDisplayPosition(h), 50000); // earf go hard
-  setTimeout(() => setRandomDisplayPosition(i), 59000); // epstein lol
+  setTimeout(() => setRandomDisplayPosition(i), 60000); // epstein lol
   setTimeout(endKanye, 65000);
 
   document.getElementById("fucku").removeEventListener("click", callback, false);
 }
 
 (function() {
+  lazyVid.load();
   document.getElementById("fucku").addEventListener("click", callback, false);
 })();
