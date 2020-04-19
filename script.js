@@ -3,8 +3,17 @@ const b = document.getElementById("b");
 const c = document.getElementById("c");
 const d = document.getElementById("d");
 const e = document.getElementById("e");
-const f = document.getElementById("f");
+const f = document.getElementsByClassName("f");
+const f1 = document.getElementById("f1");
+const f2 = document.getElementById("f2");
+const f3 = document.getElementById("f3");
+const f4 = document.getElementById("f4");
+const f5 = document.getElementById("f5");
 const g = document.getElementById("g");
+const h = document.getElementById("h");
+const i = document.getElementById("i");
+const fucku = document.getElementById("fucku");
+const text = document.getElementById("text");
 const power = document.getElementById("power");
 
 const randomExceptPrevious = prev => {
@@ -22,20 +31,23 @@ const randomExceptPrevious = prev => {
   return rand;
 }
 
-const previouslyUsed = [];
+const previouslyUsedX = [];
+const previouslyUsedY = [];
 const setRandomDisplayPosition = element => {
   console.log("calling this shit");
-  const x = randomExceptPrevious(previouslyUsed);
-  const y = randomExceptPrevious(previouslyUsed);
+  const x = randomExceptPrevious(previouslyUsedX);
+  const y = randomExceptPrevious(previouslyUsedY);
   console.log(x)
   console.log(y)
   element.style.display = "block";
   element.style.left = `${x}vw`
   element.style.top = `${y}vh`
-  if (element === f) {
-    f.style.opacity = 1;
-    f.style.visibility = "visible";
-  }
+  element.style.opacity = 1;
+}
+
+const endKanye = () => {
+  fucku.style.backgroundColor = "black";
+  text.style.opacity = 0;
 }
 
 const callback = () => {
@@ -45,18 +57,25 @@ const callback = () => {
   var vid = document.getElementById("stronger");
   vid.play();
 
-  setTimeout(() => setRandomDisplayPosition(power), 39500); // NO ONE MAN
-  setTimeout(() => setRandomDisplayPosition(a), 2910);
+  setTimeout(() => setRandomDisplayPosition(a), 2940);
   setTimeout(() => setRandomDisplayPosition(b), 6200);
-  setTimeout(() => setRandomDisplayPosition(c), 13500);
-  setTimeout(() => setRandomDisplayPosition(f), 14500); // ego
-  setTimeout(() => setRandomDisplayPosition(d), 24600); // 30k
+  setTimeout(() => setRandomDisplayPosition(c), 13500); // penis too small @ u
+  setTimeout(() => setRandomDisplayPosition(f1), 14500); // ego
+  setTimeout(() => setRandomDisplayPosition(f2), 14700); // ego
+  setTimeout(() => setRandomDisplayPosition(f3), 15000); // ego
+  setTimeout(() => setRandomDisplayPosition(f4), 15300); // ego
+  setTimeout(() => setRandomDisplayPosition(f5), 16000); // ego
   setTimeout(() => setRandomDisplayPosition(e), 23500); //rsu backload
+  setTimeout(() => setRandomDisplayPosition(d), 24600); // 30k
+  setTimeout(() => setRandomDisplayPosition(power), 40800); // NO ONE MAN
   setTimeout(() => setRandomDisplayPosition(g), 49500);
-  setTimeout(() => setRandomDisplayPosition(h), 49500);
+  setTimeout(() => setRandomDisplayPosition(h), 50000); // earf go hard
+  setTimeout(() => setRandomDisplayPosition(i), 59000); // epstein lol
+  setTimeout(endKanye, 65000);
 
-
-
+  document.getElementById("fucku").removeEventListener("click", callback, false);
 }
 
-document.getElementById("fucku").addEventListener("click", callback);
+(function() {
+  document.getElementById("fucku").addEventListener("click", callback, false);
+})();
