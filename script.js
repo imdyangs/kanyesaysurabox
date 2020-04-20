@@ -80,7 +80,7 @@ const callback = () => {
 (function() {
   vid.addEventListener("canplay", () => {
     console.log(vid.readyState);
-    if (vid.readyState >= 3) {
+    if (vid.readyState >= 2) {
       setTimeout(function() {
         fucku.style.opacity = 1;
       }, 1200);
