@@ -19,6 +19,13 @@ var vid = document.getElementById("stronger");
 var lazyVid = document.getElementById("lazy-loaded-swap");
 const wat = document.getElementById("wat");
 const wat2 = document.getElementById("wat2");
+const circleTimer1 = document.getElementById("circle-timer1")
+const circleTimer2 = document.getElementById("circle-timer2")
+const circleTimer3 = document.getElementById("circle-timer3")
+const circleTimer4 = document.getElementById("circle-timer4")
+const circleTimer5 = document.getElementById("circle-timer5")
+const circleTimer6 = document.getElementById("circle-timer6")
+circleTimers = [circleTimer1, circleTimer2, circleTimer3, circleTimer4, circleTimer5, circleTimer6];
 
 const randomExceptPrevious = prev => {
   let rand = Math.floor((Math.random() * 67)) + 5;
@@ -83,6 +90,12 @@ const callback = () => {
   let counter = 30;
   const prankpatrol = setInterval(() => {
     wat2.innerHTML = `"WAIT WAIT ${counter}S WAIT WAIT WAIT WAIT &#10; ¿¿¿¿¿¿KCAN YE¿¿¿¿¿`;
+    circleTimer1.innerHTML = `"${counter}"`
+    circleTimer2.innerHTML = `"${counter}"`
+    circleTimer3.innerHTML = `"${counter}"`
+    circleTimer4.innerHTML = `"${counter}"`
+    circleTimer5.innerHTML = `"${counter}"`
+    circleTimer6.innerHTML = `"${counter}"`
     counter--;
   }, 1000)
 
