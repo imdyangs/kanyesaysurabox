@@ -82,7 +82,7 @@ const callback = () => {
 (function() {
   let counter = 30;
   const prankpatrol = setInterval(() => {
-    wat2.innerHTML = `"WAIT WAIT ${counter}S WAIT WAIT WAIT WAIT`;
+    wat2.innerHTML = `"WAIT WAIT ${counter}S WAIT WAIT WAIT WAIT &#10; ¿¿¿¿¿¿KCAN YE¿¿¿¿¿`;
     counter--;
   }, 1000)
 
