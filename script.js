@@ -17,6 +17,7 @@ const text = document.getElementById("text");
 const power = document.getElementById("power");
 var vid = document.getElementById("stronger");
 var lazyVid = document.getElementById("lazy-loaded-swap");
+const wat = document.getElementById("wat");
 
 const randomExceptPrevious = prev => {
   let rand = Math.floor((Math.random() * 67)) + 5;
@@ -78,13 +79,16 @@ const callback = () => {
 
 
 (function() {
-  vid.addEventListener("loadedmetadata", () => {
+
+
+  vid.addEventListener("canplay", () => {
     console.log(vid.readyState);
     if (vid.readyState >= 2) {
       setTimeout(function() {
         fucku.style.opacity = 1;
-      }, 1200);
+        document.getElementById("fucku").addEventListener("click", callback, false);
+        wat.style.opacity = 0;
+      }, 20000);
     }
   })
-  document.getElementById("fucku").addEventListener("click", callback, false);
 })();

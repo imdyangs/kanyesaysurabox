@@ -4,11 +4,15 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  -ms-transform: translateZ(0);
   transform: translateZ(0);
   background-color: #ece4cf;
 }
-
 
 #fucku {
   opacity: 0;
@@ -40,12 +44,16 @@ body {
   position: relative;
   margin: auto;
   cursor: pointer;
-  color: #D4C8AE;
+  color: #d4c8ae;
   z-index: 2;
   font-size: 80px;
   text-align: center;
   color: transparent;
-  background-image: linear-gradient(rgba(236, 228, 207, 0.32), hsla(14, 34%, 14%, 0.47), rgba(236, 228, 207, 0.32));
+  background-image: linear-gradient(
+    rgba(236, 228, 207, 0.32),
+    hsla(14, 34%, 14%, 0.47),
+    rgba(236, 228, 207, 0.32)
+  );
 }
 
 /* ANIMATION */
@@ -55,7 +63,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  color: #D4C8AE;
+  color: #d4c8ae;
   pointer-events: none;
   text-shadow: 3px 3px rgba(0, 0, 0, 0.7);
 }
@@ -178,27 +186,41 @@ body {
 
 /* box animation */
 .b-image {
-    align-self: flex-end;
-    animation-duration: 0.8s;
-    animation-iteration-count: 2;
-    height: 95px;
-    margin: 0 auto 0 auto;
-    transform-origin: bottom;
-    width: 95px;
+  align-self: flex-end;
+  animation-duration: 0.8s;
+  animation-iteration-count: 2;
+  height: 95px;
+  margin: 0 auto 0 auto;
+  transform-origin: bottom;
+  width: 95px;
 }
 
 .bounce-5 {
-    animation-name: bounce-5;
-    animation-timing-function: ease-in-out;
+  animation-name: bounce-5;
+  animation-timing-function: ease-in-out;
 }
 @keyframes bounce-5 {
-    0%   { transform: scale(1,1)    translateY(0); }
-    10%  { transform: scale(1.1,.9) translateY(0); }
-    30%  { transform: scale(.9,1.1) translateY(-100px); }
-    50%  { transform: scale(1,1)    translateY(0); }
-    57%  { transform: scale(1,1)    translateY(-7px); }
-    64%  { transform: scale(1,1)    translateY(0); }
-    100% { transform: scale(1,1)    translateY(0); }
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-100px);
+  }
+  50% {
+    transform: scale(1, 1) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
 }
 
 /* end of box animation */
@@ -267,3 +289,54 @@ body {
 #coming {
   display: none;
 }
+#wat {
+  transform: translateZ(0);
+  transition: opacity 0.2 ease-in;
+  -webkit-transition: opacity 0.2 ease-in;
+  -moz-transition: opacity 0.2 ease-in;
+  -ms-transition: opacity 0.2 ease-in;
+  -o-transition: opacity 0.2 ease-in;
+  transition: opacity 0.2 ease-in;
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+#loaders {
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  position: fixed;
+}
+
+.lds-circle {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  background: #fff;
+  animation: lds-circle 3.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-circle < div::nth-child(odd) {
+  background:
+}
+@keyframes lds-circle {
+  0%, 100% {
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
+}
+
