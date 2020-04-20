@@ -12,6 +12,7 @@ const f5 = document.getElementById("f5");
 const g = document.getElementById("g");
 const h = document.getElementById("h");
 const i = document.getElementById("i");
+const godless = document.getElementById("GODLESS");
 const fucku = document.getElementById("fucku");
 const text = document.getElementById("text");
 const power = document.getElementById("power");
@@ -87,7 +88,10 @@ const callback = () => {
 
 
 (function() {
-  let counter = 30;
+  let counter = 20;
+  godless.addEventListener("onunload", () => {
+    window.location.reload(true);
+  })
   const prankpatrol = setInterval(() => {
     wat2.innerHTML = `"WAIT WAIT ${counter}S WAIT WAIT WAIT WAIT &#10; ¿¿¿¿¿¿KCAN YE¿¿¿¿¿`;
     circleTimer1.innerHTML = `"${counter}"`
