@@ -304,6 +304,24 @@ body {
   transform: scale(-1, 1);
 }
 
+#wat2 {
+  color: #7acec2;
+  bottom: 2px;
+  transform: translateZ(0);
+  transition: opacity 0.2 ease-in;
+  -webkit-transition: opacity 0.2 ease-in;
+  -moz-transition: opacity 0.2 ease-in;
+  -ms-transition: opacity 0.2 ease-in;
+  -o-transition: opacity 0.2 ease-in;
+  transition: opacity 0.2 ease-in;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.7);
+  -moz-transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
 #loaders {
   height: 100%;
   width: 100%;
@@ -317,7 +335,7 @@ body {
   height: 64px;
   margin: 8px;
   border-radius: 50%;
-  background: #fff;
+  background: #d4c8ae;
   animation: lds-circle 3.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
 

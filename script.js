@@ -18,6 +18,7 @@ const power = document.getElementById("power");
 var vid = document.getElementById("stronger");
 var lazyVid = document.getElementById("lazy-loaded-swap");
 const wat = document.getElementById("wat");
+const wat2 = document.getElementById("wat2");
 
 const randomExceptPrevious = prev => {
   let rand = Math.floor((Math.random() * 67)) + 5;
@@ -79,15 +80,21 @@ const callback = () => {
 
 
 (function() {
-
+  let counter = 30;
+  const prankpatrol = setInterval(() => {
+    wat2.innerHTML = `"WILL U WAIT ${counter}S TO HEAR WHAT ^™™™`;
+    counter--;
+  }, 1000)
 
   vid.addEventListener("canplay", () => {
     console.log(vid.readyState);
     if (vid.readyState >= 2) {
       setTimeout(function() {
         fucku.style.opacity = 1;
+        loaders.style.opacity = 0;
         document.getElementById("fucku").addEventListener("click", callback, false);
         wat.style.opacity = 0;
+        wat2.style.opacity = 0;
       }, 20000);
     }
   })
