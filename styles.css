@@ -5,6 +5,8 @@ body {
   height: 100vh;
   overflow: hidden;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transform: translateZ(0);
+  background-color: #ece4cf;
 }
 
 

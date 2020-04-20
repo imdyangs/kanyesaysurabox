@@ -49,7 +49,9 @@ const endKanye = () => {
   text.style.opacity = 0;
 }
 
+
 const callback = () => {
+  let initTime = performance.now();
   console.log("https://www.youtube.com/watch?v=ll3CMgiUPuU")
   const btn = document.getElementById("LEL");
   btn.style.display = "none";
@@ -72,10 +74,18 @@ const callback = () => {
   setTimeout(endKanye, 65000);
 
   document.getElementById("fucku").removeEventListener("click", callback, false);
+
+
+
+}
+
+const showShit = () => {
+  console.log("showing shit");
+  fucku.style.display = "flex";
 }
 
 (function() {
-  lazyVid.load();
-  vid.load();
+  fucku.style.display = "none";
+  vid.addEventListener("canplaythrough", showShit);
   document.getElementById("fucku").addEventListener("click", callback, false);
 })();
