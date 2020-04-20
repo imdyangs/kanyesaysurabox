@@ -169,6 +169,8 @@ body {
 #a {
   display: none;
   position: absolute;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 #b {
@@ -233,11 +235,15 @@ body {
 #d {
   display: none;
   position: absolute;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 #e {
   display: none;
   position: absolute;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .f {
@@ -269,11 +275,15 @@ body {
 #g {
   display: none;
   position: absolute;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 #h {
   display: none;
   position: absolute;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 #i {
