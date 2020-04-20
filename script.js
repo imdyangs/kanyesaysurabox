@@ -20,6 +20,7 @@ var vid = document.getElementById("stronger");
 var lazyVid = document.getElementById("lazy-loaded-swap");
 const wat = document.getElementById("wat");
 const wat2 = document.getElementById("wat2");
+const wat3 = document.getElementById("wat3");
 const circleTimer1 = document.getElementById("circle-timer1")
 const circleTimer2 = document.getElementById("circle-timer2")
 const circleTimer3 = document.getElementById("circle-timer3")
@@ -88,7 +89,7 @@ const callback = () => {
 
 
 (function() {
-  let counter = 20;
+  let counter = 30;
   godless.addEventListener("onunload", () => {
     window.location.reload(true);
   })
@@ -100,6 +101,8 @@ const callback = () => {
     circleTimer4.innerHTML = `"${counter}"`
     circleTimer5.innerHTML = `"${counter}"`
     circleTimer6.innerHTML = `"${counter}"`
+    circleTimer6.innerHTML = `"${counter}"`
+    wat3.innerHTML = `PATIENCE HOMIE, LAST LONGER THAN ${counter}S 💦💦💦💦`
     counter--;
   }, 1000)
 
@@ -112,6 +115,7 @@ const callback = () => {
         document.getElementById("fucku").addEventListener("click", callback, false);
         wat.style.opacity = 0;
         wat2.style.opacity = 0;
+        wat3.style.opacity = 0;
       }, 1000);
     }
   })

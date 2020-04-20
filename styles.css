@@ -332,10 +332,30 @@ body {
   transform: scale(1, -1);
 }
 
+#wat3 {
+  z-index: 0;
+  color: red;
+  text-shadow: 4px 4px rgba(0, 0, 255, 0.7);
+  top: 30vh;
+  right: -10vw;
+  transform: translateZ(0);
+  transition: opacity 0.2 ease-in;
+  -webkit-transition: opacity 0.2 ease-in;
+  -moz-transition: opacity 0.2 ease-in;
+  -ms-transition: opacity 0.2 ease-in;
+  -o-transition: opacity 0.2 ease-in;
+  transition: opacity 0.2 ease-in;
+  -moz-transform: rotate3d(1, -1, 1, 45deg);
+  -webkit-transform: rotate3d(1, -1, 1, 45deg);
+  -o-transform: rotate3d(1, -1, 1, 45deg);
+  -ms-transform: rotate3d(1, -1, 1, 45deg);
+  transform: rotate3d(1, -1, 1, 45deg);
+}
+
 #loaders {
   height: 100%;
   width: 100%;
-  z-index: 0;
+  z-index: 1;
   position: fixed;
 }
 
