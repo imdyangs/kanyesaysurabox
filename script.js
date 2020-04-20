@@ -74,18 +74,9 @@ const callback = () => {
   setTimeout(endKanye, 65000);
 
   document.getElementById("fucku").removeEventListener("click", callback, false);
-
-
-
 }
 
-const showShit = () => {
-  console.log("showing shit");
-  fucku.style.display = "flex";
-}
 
 (function() {
-  fucku.style.display = "none";
-  vid.addEventListener("canplaythrough", showShit);
   document.getElementById("fucku").addEventListener("click", callback, false);
 })();

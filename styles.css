@@ -11,7 +11,7 @@ body {
 
 
 #fucku {
-  top: 100vh;
+  position: absolute;
   background-color: #ece4cf;
   width: 100%;
   height: 100%;
@@ -21,6 +21,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   text-transform: uppercase;
+  transition: all .2s ease-in-out;
 }
 
 #stronger {
