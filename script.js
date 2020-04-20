@@ -78,5 +78,13 @@ const callback = () => {
 
 
 (function() {
+  vid.addEventListener("canplay", () => {
+    console.log(vid.readyState);
+    if (vid.readyState >= 3) {
+      setTimeout(function() {
+        fucku.style.opacity = 1;
+      }, 1200);
+    }
+  })
   document.getElementById("fucku").addEventListener("click", callback, false);
 })();
