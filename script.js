@@ -78,7 +78,7 @@ const callback = () => {
 
 
 (function() {
-  vid.addEventListener("canplay", () => {
+  vid.addEventListener("loadedmetadata", () => {
     console.log(vid.readyState);
     if (vid.readyState >= 2) {
       setTimeout(function() {
