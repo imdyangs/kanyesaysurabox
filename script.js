@@ -106,6 +106,19 @@ const callback = () => {
     counter--;
   }, 1000)
 
+
+  a.addEventListener("onclick",
+  () => window.open("https://old.reddit.com/r/uwaterloo/comments/60qoni/im_the_brother_of_the_student_who_committed/", "_newtab"))
+
+  d.addEventListener("onclick",
+  () => window.open("https://en.wikipedia.org/wiki/False_consciousness", "_newtab"))
+
+  e.addEventListener("onclick",
+  () => window.open("https://www.levels.fyi/", "_newtab"))
+
+  e.addEventListener("onclick",
+  () => window.open("https://www.levels.fyi/", "_newtab"))
+
   vid.addEventListener("canplay", () => {
     console.log(vid.readyState);
     if (vid.readyState >= 2) {
